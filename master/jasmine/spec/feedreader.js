@@ -55,7 +55,7 @@ $(function() {
     });
          
         
-		describe('The Menu', function() {
+	describe('The Menu', function() {
     		var menuIcon = $(".menu-icon-link");
 
     /* TODO: Write a new test suite named "The menu" */
@@ -97,8 +97,9 @@ $(function() {
         });
 
          it('should load at least one entry', function(done){
-         	var numberEntries = $(".feed .entry").length;
-         	expect(numberEntries).toBeGreaterThan(0);
+         	var numberEntries = $(".feed").find('.entry');
+         	expect(numberEntries.length >= 1).toBe(true);
+         	done();
         });
     });
     /* TODO: Write a new test suite named "Initial Entries" */
